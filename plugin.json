@@ -1,0 +1,48 @@
+{
+  "id": "store-test",
+  "kind": "plugin",
+  "version": "1.0.7",
+  "label": "Store Test Plugin",
+  "description": "Harmless test plugin with a tiny canvas game (plugin webview demo). No secrets.",
+  "min_app_version": "1.0.0",
+  "default_enabled": false,
+  "secret_keys": [],
+  "contributes": {
+    "ui.panels": [
+      {
+        "id": "game",
+        "title": "Ducky Bounce",
+        "icon": "assets/icon.svg",
+        "entry": "ui/index.html"
+      }
+    ],
+    "header.buttons": [
+      {
+        "id": "game",
+        "title": "Ducky Bounce",
+        "icon": "assets/icon.svg",
+        "action": "panel:game",
+        "order": 50
+      }
+    ],
+    "walkthrough": {
+      "id": "store-test",
+      "title": "Store Test Plugin ready",
+      "auto_start": "first_enable",
+      "settings_tab": "Store",
+      "steps": [
+        {
+          "target": "settings.store.root",
+          "title": "Store Test Plugin ready",
+          "body": "This is a harmless Store demo plugin (tiny canvas game). Use it to verify install/update flows.",
+          "advance": "next",
+          "mode": "rect"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "entry": "backend",
+    "register": "register"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "store-test",
   "kind": "plugin",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "label": "Store Test Plugin",
   "description": "Harmless test plugin with a tiny canvas game (plugin webview demo). No secrets.",
   "min_app_version": "1.0.0",
